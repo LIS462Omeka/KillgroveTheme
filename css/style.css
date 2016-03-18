@@ -1345,14 +1345,17 @@ th {
     float: left;
     margin: 12px 10px 12px 0;
   }
+  /*aligned input text center and border color*/
   .pagination input[type=text] {
     width: 5em;
     margin-right: 5px;
     vertical-align: top;
     height: 24px;
     border-width: 0.0625em;
-    border-style: solid;
+    border: solid #ccc;
     padding: -0.0625em;
+    text-align: center;
+    color: #444;
   }
 
   .pagination_next, .pagination_previous {
@@ -1365,6 +1368,7 @@ th {
     position: relative;
     display: block;
   }
+  /*added background color*/
   .pagination_next a:before, .pagination_previous a:before {
     position: absolute;
     top: 0;
@@ -1373,6 +1377,7 @@ th {
     text-align: center;
     width: 100%;
     line-height: 21px;
+    background-color: #777;
   }
 
   .pagination_next a:before {
@@ -1807,7 +1812,10 @@ th {
   #itemfiles a img {
     border: 1px solid #ccc;
   }
-
+  /*Changed background color*/
+.facet-by-metadata #Find {
+	background-color: #777;
+}
   .collection {
     clear: both;
     border-color: #ccc;
@@ -2256,10 +2264,36 @@ th {
   #advanced-search-form {
     margin-bottom: 40px;
   }
+  /*added background color*/
   #advanced-search-form .submit {
     float: right;
+    background-color: #777;
   }
-
+  #advanced-search-form .add_search {
+    background-color: #777; 
+  }
+  /*border of inputs on advanced search*/
+   #advanced-search-form input[type=text] {
+  	border: 1px solid #777;
+  }
+  #advanced-search-form #collection-search {
+    border: 1px solid #777; 
+  }
+  #advanced-search-form #item-type-search {
+    border: 1px solid #777; 
+  }
+  #advanced-search-form #featured {
+    border: 1px solid #777; 
+  }
+  #advanced-search-form #exhibit {
+    border: 1px solid #777; 
+  }
+  #advanced-search-form .advanced-search-element {
+    border: 1px solid #777; 
+  }
+  #advanced-search-form .advanced-search-type {
+    border: 1px solid #777; 
+  }
   #advanced-search-form .search-entry input[type=text],
   #advanced-search-form .search-entry select {
     width: calc((100% - 2.625em) / 3);
@@ -2267,7 +2301,6 @@ th {
     margin: 0 3px 0 0;
     float: none;
   }
-
   #advanced-search-form .field .remove_search {
     text-indent: -9999px;
     margin-top: 0;
