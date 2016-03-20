@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
 html {
   font-family: sans-serif;
   /* 1 */
@@ -420,6 +421,7 @@ th {
     font-size: 32px;
     line-height: 48px;
     margin-bottom: 0.5em;
+    font-family: Remington;
   }
 
   h2 {
@@ -1106,6 +1108,12 @@ th {
   }
 }
 
+ /*---Fonts---*/
+   @font-face {
+    font-family: Remington;
+    src: url("../RemingtonNoiseless.ttf");
+   }
+
 @media screen {
   /* @end */
   /* @group ----- Header ----- */
@@ -1124,7 +1132,7 @@ th {
   }
 /*customized family*/
   #site-title {
-  	font-family: "Courier New", Courier, monospace;
+  	font-family: Remington;
     font-size: 32px;
     margin-left: 16px;
     padding-bottom: 2em;
@@ -1814,7 +1822,7 @@ th {
   }
   /*Changed background color*/
 .facet-by-metadata #Find {
-	background-color: #777;
+	background-color: #6F94AC;
 }
   .collection {
     clear: both;
@@ -2077,6 +2085,7 @@ th {
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #888888;
+    border: solid #6F94AC;
   }
 
   #primary-nav {
@@ -2106,7 +2115,6 @@ th {
     display: inline;
     padding: 0 1.88679%;
   }
-
 
   /* @end */
   /* @group ----- Header ----- */
@@ -2177,7 +2185,7 @@ th {
   /* == Browse Items == */
   .pagination {
     width: 47%;
-    overflow: hidden;
+    overflow: visible;
     float: left;
     padding-bottom: 1.5em;
   }
@@ -2194,15 +2202,16 @@ th {
     margin-top: 1.125em;
     float: left;
   }
-
+/*Fixes issues when resizing screen and display of pagination*/
   .pagination_list a, li.pagination_current {
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
+    border-style: none;
     display: inline-block;
-    padding: 0.375em 10px;
+    /*padding: 0.375em 10px 0.375em, 0px;*/
+    padding: 0.375em 5px;
     vertical-align: top;
     margin-right: 10px;
   }
-
   #sort-links {
     clear: none;
     float: right;
@@ -2267,32 +2276,32 @@ th {
   /*added background color*/
   #advanced-search-form .submit {
     float: right;
-    background-color: #777;
+    background-color: #6F94AC;
   }
   #advanced-search-form .add_search {
-    background-color: #777; 
+    background-color: #6F94AC; 
   }
   /*border of inputs on advanced search*/
    #advanced-search-form input[type=text] {
-  	border: 1px solid #777;
+  	border: solid #6F94AC;
   }
   #advanced-search-form #collection-search {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form #item-type-search {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form #featured {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form #exhibit {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form .advanced-search-element {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form .advanced-search-type {
-    border: 1px solid #777; 
+    border: solid #6F94AC; 
   }
   #advanced-search-form .search-entry input[type=text],
   #advanced-search-form .search-entry select {
