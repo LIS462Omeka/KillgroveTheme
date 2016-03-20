@@ -45,7 +45,13 @@ $sortLinks[__('Date Added')] = 'added';
 
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
     <div class="item-description">
-        <?php echo $description; ?>
+        <?php echo '<b>Description:</b> ' . $description; ?>
+    </div>
+    <?php endif; ?>
+    <br/>
+    <?php if ($format = metadata('item', array('Dublin Core', 'Format'))): ?>
+    <div class="item-description">
+        <?php echo '<b>Format:</b> ' . $format; ?>
     </div>
     <?php endif; ?>
 
