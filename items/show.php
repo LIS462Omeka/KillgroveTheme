@@ -2,12 +2,15 @@
 
 <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
-    <?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
-    <div class="element-text"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
-    <?php endif; ?>
+<?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
+<div class="element-text"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
+<?php endif; ?>
 
-<?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+<!-- added universal viewer helper here. Will try similar for geolocation after metadata, but no guarantees. Orig programmer
+helpfully documented this particular method. Should we make it a div? -->
+<?php echo $this->universalViewer(); ?>
 
+<!-- back to original code here -->
 <?php echo all_element_texts('item'); ?>
 
 <!-- The following returns all of the files associated with an item. -->
@@ -39,6 +42,9 @@
     <h3><?php echo __('Citation'); ?></h3>
     <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
 </div>
+
+<!-- inserting Geolocation call here Ditto on div question.-->
+<?php echo $this->itemGoogleMap(); ?>
 
 <nav>
 <ul class="item-pagination navigation">
