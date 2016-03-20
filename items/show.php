@@ -6,6 +6,7 @@
     <div class="element-text"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
     <?php endif; ?>
 
+<?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
 <?php echo all_element_texts('item'); ?>
 
@@ -38,8 +39,6 @@
     <h3><?php echo __('Citation'); ?></h3>
     <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
 </div>
-
-<?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
 <nav>
 <ul class="item-pagination navigation">
