@@ -1,4 +1,5 @@
-<?php if(isset(get_view()->item)): //check if this looks like an item show page ?>
+<?php if(isset(get_view()->item)): //check if this looks like an item show page
+//Taken from forum discussion listed here: http://omeka.org/forums/topic/adding-categories-to-simple-search-results ?>
 
 <?php
 //dig through the elements for display that are passed into this file
@@ -6,9 +7,14 @@
 //this should let you collect the elements you want in the order you want
 //follow this pattern to get more or change the order
 
+$x = metadata($record, array('Dublin Core', 'Format'));
+
 $wantedElements = array();
-$wantedElements['Title'] = $elementsForDisplay['Dublin Core']['Title'];
-$wantedElements['Format'] = $elementsForDisplay['Dublin Core']['Format'];
+$wantedElements['Date'] = $elementsForDisplay['Dublin Core']['Date'];
+if(isset($x)){
+	$wantedElements['Format'] = $elementsForDisplay['Dublin Core']['Format'];
+	}
+//$wantedElements['Format'] = $elementsForDisplay['Dublin Core']['Format'];
 /*if(isset($elementsForDisplay['Item Type Metadata'])) {
     $wantedElements['Primary Source Text'] = $elementsForDisplay['Item Type Metadata']['Text'];
 }*/
