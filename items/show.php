@@ -7,8 +7,8 @@
 <?php endif; ?>
 
 <!-- added universal viewer helper here. Will try similar for geolocation after metadata, but no guarantees. Orig programmer
-helpfully documented this particular method. Should we make it a div? -->
-<?php echo $this->universalViewer(); ?>
+helpfully documented this particular method. -->
+<div class="universalviewer"></div><?php echo $this->universalViewer(); ?></div>
 
 <!-- back to original code here -->
 <?php echo all_element_texts('item'); ?>
