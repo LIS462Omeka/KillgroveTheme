@@ -43,8 +43,9 @@ helpfully documented this particular method. -->
     <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
 </div>
 
-<!-- inserting Geolocation call here Ditto on div question.-->
-<?php echo $this->itemGoogleMap(); ?>
+<!-- fire plugin to grab geoloc --!>
+<?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+
 
 <nav>
 <ul class="item-pagination navigation">
