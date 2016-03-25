@@ -8,7 +8,7 @@
 
 <!-- added universal viewer helper here. Will try similar for geolocation after metadata, but no guarantees. Orig programmer
 helpfully documented this particular method. -->
-<div class="universalviewer"></div><?php echo $this->universalViewer(); ?></div>
+<div class="universalviewer"></div><?php echo $this->universalViewer(); ?>
 
 <!-- back to original code here -->
 <?php echo all_element_texts('item'); ?>
@@ -45,7 +45,7 @@ helpfully documented this particular method. -->
 
 <!-- fire plugin to grab geoloc --!>
 <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
+</div>
 
 <nav>
 <ul class="item-pagination navigation">
