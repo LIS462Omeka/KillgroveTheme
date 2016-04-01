@@ -10,8 +10,8 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
     	array(
     		array('label'=>__('Browse All'), 'uri'=> url('items/browse')),
     		array('label'=>__('Browse Subjects'), 'uri'=> url('subjects/list')),
-    		array('label'=>__('Browse Map'), 'uri'=> url('items/map')),
-    		array('label'=>__('Browse Tags'), 'uri'=> url('items/tags')),
+    		array('label'=>__('Browse By Location'), 'uri'=> url('items/map')),
+    		//array('label'=>__('Browse Tags'), 'uri'=> url('items/tags')),
     	)
     ); ?>
 </nav>
@@ -42,19 +42,12 @@ $sortLinks[__('Date Added')] = 'added';
         <?php echo link_to_item(item_image('square_thumbnail')); ?>
     </div>
     <?php endif; ?>
-
-    <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
+    <?php if ($description = metadata('item', array('Dublin Core', 'Abstract'), array('snippet'=>200))): ?>
     <div class="item-description">
         <?php echo '<b>Description:</b> ' . $description; ?>
     </div>
     <?php endif; ?>
     <br/>
-    <?php if ($format = metadata('item', array('Dublin Core', 'Format'))): ?>
-    <div class="item-description">
-        <?php echo '<b>Format:</b> ' . $format; ?>
-    </div>
-    <?php endif; ?>
-
     <?php if (metadata('item', 'has tags')): ?>
     <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
         <?php echo tag_string('items'); ?></p>
