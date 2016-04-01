@@ -7,22 +7,57 @@
 //this should let you collect the elements you want in the order you want
 //follow this pattern to get more or change the order
 
-$x = metadata($record, array('Dublin Core', 'Format'));
+//create variable to check if metadata element isset
 
+
+$genre = metadata ($record, array ('MODS','genre'));
+$date = metadata ($record, array ('MODS','originInfo_DateCreated'));
+$namePart = metadata ($record, array ('MODS','name'));
+$role = metadata ($record, array ('MODS','name_Role'));
+$abstract = metadata ($record, array ('MODS','abstract'));
+$subject = metadata ($record, array ('MODS','subject'));
+$language = metadata ($record, array ('MDOS','language'));
+$accessRights = metadata ($record, array ('MODS','accessCondition'));
+$identifier = metadata ($record, array ('MODS','identifier'));
+
+//create array
 $wantedElements = array();
-$wantedElements['Date'] = $elementsForDisplay['Dublin Core']['Date'];
-if(isset($x)){
-	$wantedElements['Format'] = $elementsForDisplay['Dublin Core']['Format'];
+if(isset($genre)){
+	$wantedElements['Genre'] = $elementsForDisplay['MODS']['genre'];
 	}
-//$wantedElements['Format'] = $elementsForDisplay['Dublin Core']['Format'];
-/*if(isset($elementsForDisplay['Item Type Metadata'])) {
-    $wantedElements['Primary Source Text'] = $elementsForDisplay['Item Type Metadata']['Text'];
-}*/
-$wantedElements['Description'] = $elementsForDisplay['Dublin Core']['Description'];
+if(isset($date)){
+	$wantedElements['Date'] = $elementsForDisplay['MODS']['originInfo_DateCreated'];
+	}
+if(isset($namePart)){
+	$wantedElements[$role] = $elementsForDisplay['MODS']['name_Role'];
+	}
+if(isset($namePart)){
+	$wantedElements[$namePart] = $elementsForDisplay['MODS']['name'];
+	}
+if(isset($abstract)){
+	$wantedElements['Description'] = $elementsForDisplay['MODS']['Abstract'];
+	}
+if(isset($subject)){
+	$wantedElements['Subject'] = $elementsForDisplay['MODS']['subject'];
+	}
+if(isset($language)){
+	$wantedElements['Language'] = $elementsForDisplay['MODS']['language'];
+	}
+if(isset($accessRights)){
+	$wantedElements['Access Rights'] = $elementsForDisplay['MODS']['accessCondition'];
+	}
+if(isset($identifier)){
+	$wantedElements['Unique Identifier'] = $elementsForDisplay['MODS']['identifier'];
+	}
+	
 ?>
 
+
 <div class="element-set">
-    <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
+<br/>
+    <?php
+    //Display array
+    foreach ($wantedElements as $elementName => $elementInfo): ?>
     <div id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
         <h3><?php echo html_escape(__($elementName)); ?></h3>
         <?php foreach ($elementInfo['texts'] as $text): ?>
