@@ -11,8 +11,6 @@
                 <p><?php echo $copyright; ?></p>
             <?php endif; ?>
             <p><?php echo __('<ul>
-            <li><a style="color:#404040" href="http://dany.simmons.edu/killgrovepapers/about">About</a></li>
-            <li><a style="color:#404040" href="http://dany.simmons.edu/killgrovepapers/help">Help</a></li>
             <li><a style="color:#404040" href="http://dany.simmons.edu/killgrovepapers/contact">Contact</a></li>
             </ul>'); ?></p>
         </div>
