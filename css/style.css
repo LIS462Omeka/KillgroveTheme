@@ -6,13 +6,21 @@
  */
 
 html {
-  font-family: sans-serif;
+  font-family: serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+
+/*testing border image here (not convinced yet)
+border-image:	url("../images/AerogrammeCSSBorderComp.png"); 
+border-image-slice: 33% 33% 33% 33%; 
+border-image-width: 3em 3em 0em 0em; 
+border-image-outset: 0em 0em 0em 0em; 
+border-image-repeat: round round;*/
 }
+
 /*Added textured background*/
 body {
 	background-image: url("../images/background.png");
@@ -408,8 +416,8 @@ th {
 @media screen {
   /* @group ----- Generic styles ----- */
   body {
-    font-family: "PT Serif", Times, serif;
-    word-break: break-word;
+    font-family: "Roboto Slab", "PT Serif", serif;
+    word-break: normal;
     font-size: 16px;
   }
 
@@ -481,9 +489,10 @@ th {
     margin-left: 1.3333em;
   }
 
+/*customized CSS for table on search results*/
   table {
     width: 100%;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-width: 1px 1px 0 0;
     margin-bottom: 1.3333em;
   }
@@ -494,7 +503,7 @@ th {
   }
 
   th, td {
-    border: solid #ccc;
+    /*border: solid #ccc;*/
     border-width: 0 0 1px 1px;
     padding: 4px;
   }
@@ -685,7 +694,7 @@ th {
     -webkit-appearance: none;
     border: 0;
     cursor: pointer;
-    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Slab', 'PT Serif', serif;
     font-size: 16px;
     line-height: 24px;
     outline: 0;
@@ -738,7 +747,7 @@ th {
       Leaving out Helvetica Neue, to not throw off size="..."
       on inputs. Arial is more reliable, on Windows and OS X.
     */
-    font-family: "PT Serif", serif;
+    font-family: "Roboto Slab", "PT Serif", serif;
     height: 1.8em;
     /* IE7 */
     *padding-top: 2px;
@@ -1291,6 +1300,7 @@ th {
     display: inline-block;
     vertical-align: top;
     width: 100%;
+    color: #fff;
   }
   .mobile li a:before {
     content: "";
@@ -1890,7 +1900,7 @@ th {
   #search-filters li li:after {
     margin: 0 .1em 0 0;
   }
-
+   
   #search-results td,
   #search-results th {
     vertical-align: top;
@@ -1899,6 +1909,10 @@ th {
 
   #search-results .image {
     margin: 0 0.75em 0 0;
+  }
+  
+  #search-results tr:nth-child(even){
+    background-color: #ddd;
   }
 
   /* @end */
@@ -2114,6 +2128,9 @@ th {
     *margin-left: -1em;
     display: inline;
     padding: 0 1.88679%;
+  }
+  #advanced {
+  	text-align: right;
   }
 
   /* @end */
