@@ -23,9 +23,9 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <?php if ($total_results > 0): ?>
 
 <?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Creator')] = 'Dublin Core,Creator';
-$sortLinks[__('Date Added')] = 'added';
+$sortLinks[__('Title')] = 'MODS,Title';
+$sortLinks[__('Place')] = 'MODS,Place Created';
+$sortLinks[__('Date Created')] = 'MODS,Date Created';
 ?>
 <div id="sort-links">
     <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
@@ -35,14 +35,14 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item hentry">
-    <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
+    <h2><?php echo link_to_item(metadata('item', array('MODS', 'Title')), array('class'=>'permalink')); ?></h2>
     <div class="item-meta">
     <?php if (metadata('item', 'has files')): ?>
     <div class="item-img">
         <?php echo link_to_item(item_image('square_thumbnail')); ?>
     </div>
     <?php endif; ?>
-    <?php if ($description = metadata('item', array('Dublin Core', 'Abstract'), array('snippet'=>200))): ?>
+    <?php if ($description = metadata('item', array('MODS', 'Abstract'), array('snippet'=>200))): ?>
     <div class="item-description">
         <?php echo '<b>Description:</b> ' . $description; ?>
     </div>
