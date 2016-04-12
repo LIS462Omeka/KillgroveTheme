@@ -20,7 +20,7 @@ echo head(array(
     if (count($subjects)) :
         echo $this->subjectBrowse($subjects, array('mode' => 'list'));
     else:
-        echo '<p>' . __('There is no subjects.') . '</p>';
+        echo '<p>' . __('There are no subjects.') . '</p>';
     endif;
     ?>
 </div>
