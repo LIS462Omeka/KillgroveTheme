@@ -28,8 +28,10 @@ if (count($subjects)):
 <style>
 /*Added width*/
 .sb-pagination {float: none; width:100%;}
-.sb-pagination ul {height: 3em;}
+.sb-pagination ul {height: 5em;}
 .sb-pagination span {display: inline-block; line-height: 36px; padding: 0 5px;}
+/*Added link color*/
+.pagination_range a {color: #6F94AC;}
 </style>
 <div class="pagination sb-pagination" id="pagination-top">
     <?php echo $pagination_list; ?>
@@ -59,7 +61,7 @@ if (count($subjects)):
         <?php if (empty($options['raw'])):
             echo '<a href="'
                 . url(sprintf('items/browse?search=&amp;advanced[0][element_id]=%s&amp;advanced[0][type]=contains&amp;advanced[0][terms]=%s&amp;submit_search=Search',
-                    $dcSubjectId, urlencode($subject)))
+                    $MODSSubjectId, urlencode($subject)))
                 . '">'
                 . $subject
                 . '</a>';
