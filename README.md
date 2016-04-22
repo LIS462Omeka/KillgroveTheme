@@ -1,5 +1,5 @@
 # Forked from
 # theme-thanksroy (A tribute to Roy Rosenzweig.)
 
-## Omeka theme development playground for digital libraries classwork. Not much to see yet. 
+## Omeka theme development playground for digital libraries classwork. Lots to see, now we're done.
 
