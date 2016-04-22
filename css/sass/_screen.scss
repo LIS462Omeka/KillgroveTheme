@@ -1,8 +1,7 @@
 /* @group ----- Generic styles ----- */
 
 body {
-    font-family: "PT Serif", Times, serif;
-    word-break: break-word;
+    font-family: "Roboto Slab", "PT Serif", serif;
     font-size: $base-font-size;
 }
 
@@ -174,27 +173,27 @@ blockquote {
 ----------------------------------------------------------------------------------------------------*/
 
 .input_tiny {
-  width: 50px;
+  width: 3em;
 }
 
 .input_small {
-  width: 100px;
+  width: 6em;
 }
 
 .input_medium {
-  width: 150px;
+  width: 9em;
 }
 
 .input_large {
-  width: 200px;
+  width: 12em;
 }
 
 .input_xlarge {
-  width: 250px;
+  width: 15em;
 }
 
 .input_xxlarge {
-  width: 300px;
+  width: 18em;
 }
 
 .input_full {
@@ -207,7 +206,7 @@ blockquote {
 */
 .input_full_wrap {
   display: block;
-  padding-right: 8px;
+  padding-right: 0.5em;
 }
 
 /* `UI Consistency
@@ -276,12 +275,12 @@ input[type="button"] {
   -webkit-appearance: none;
   border:0;
   cursor: pointer;
-  font-family:'PT Serif', serif;
+  font-family:'Roboto Slab', 'PT Serif', serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
   outline: 0;
   overflow: visible;
-  padding: 3px 10px;
+  padding: 0.2em 0.75em;
   width: auto;
 
   /* IE7 */
@@ -330,7 +329,7 @@ input[type="week"] {
     Leaving out Helvetica Neue, to not throw off size="..."
     on inputs. Arial is more reliable, on Windows and OS X.
   */
-  font-family: "PT Serif", serif;
+  font-family: "Roboto Slab", "PT Serif", serif;
   height: 1.8em;
 
   /* IE7 */
@@ -377,9 +376,9 @@ select:focus,
 select:active,
 textarea:focus,
 textarea:active {
-  -moz-box-shadow: #333 0 0 7px;
-  -webkit-box-shadow: #333 0 0 7px;
-  box-shadow: #333 0 0 7px;
+  -moz-box-shadow: #333 0 0 0.5em;
+  -webkit-box-shadow: #333 0 0 0.5em;
+  box-shadow: #333 0 0 0.5em;
 
   /* for Opera */
   z-index: 1;
@@ -442,7 +441,7 @@ select[multiple] {
     background-image: url(../images/select_arrow.gif);
     background-repeat: no-repeat;
     background-position: right center;
-    padding-right: 20px;
+    padding-right: 1.5em;
   }
 
   select[size],
@@ -452,13 +451,13 @@ select[multiple] {
   }
 
   ::-webkit-validation-bubble-message {
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.3em;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #000));
     border: 1px solid;
     border-color: #747474 #5e5e5e #4f4f4f;
     color: #fff;
     font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
-    padding: 15px 15px 17px;
+    padding: 1em 1em 1.1em;
     text-shadow: #000 0 0 1px;
   }
 
@@ -473,7 +472,7 @@ select[multiple] {
 }
 
 textarea {
-  min-height: 40px;
+  min-height: 3em;
   overflow: auto;
   resize: vertical;
   width: 100%;
@@ -590,7 +589,7 @@ textarea#rights {
     float:none;
     display:none;
     line-height:1.33333em;
-    width: 512px;
+    width: 75%;
     border:none;
     height:31em;
     color:#444;
@@ -675,7 +674,7 @@ header {
 
 #site-title {
     font-size: 2 * $base-font-size;
-    margin-left: 16px;
+    margin-left: 3em;
     @include padding-trailer();
     @include padding-leader();
 
@@ -715,11 +714,11 @@ ul.navigation { padding-left: 0; }
 .menu-button:after {
     content: "";
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 0.75em;
+    height: 0.75em;
     background-image: url('../images/menu.png');
     background-size: contain;
-    margin-left: 10px;
+    margin-left: 0.7em;
 }
 
 .no-backgroundsize .menu-button:after { background-image: url('../images/menu_ie.png'); }
