@@ -12,7 +12,7 @@ echo head(array('title' => $title, 'bodyclass' => 'map browse'));
     	array(
     		array('label'=>__('Browse All'), 'uri'=> url('items/browse')),
     		array('label'=>__('Browse Subjects'), 'uri'=> url('subjects/list')),
-    		array('label'=>__('Browse Map'), 'uri'=> url('items/map')),
+    		array('label'=>__('Browse by Location'), 'uri'=> url('items/map')),
     		//array('label'=>__('Browse Tags'), 'uri'=> url('items/tags')),
     	)
     ); ?>
