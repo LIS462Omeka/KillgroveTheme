@@ -27,7 +27,7 @@
     queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 
-    echo theme_header_background();
+    //echo theme_header_background();
     ?>
 
     <?php
@@ -46,9 +46,7 @@
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
             color: <?php echo $titleColor; ?>;
-            <?php if (get_theme_option('header_background')): ?>
-            text-shadow: 0px 0px 20px #000;
-            <?php endif; ?>
+    
         }
         a:link {
             color: <?php echo $linkColor; ?>;
@@ -110,14 +108,15 @@
             
         <div id="wrap">
             <nav id="primary-nav" role="navigation">
-                <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-container" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>
                     <?php echo search_form(); ?>
                     <?php endif; ?>
+                    
                 </div>
+                <?php echo public_nav_main(array('role' => 'navigation')); ?>
             </nav>
             <div id="content" role="main" tabindex="-1">
                 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
