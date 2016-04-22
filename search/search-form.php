@@ -26,6 +26,6 @@
     <?php endif; ?>
     <?php echo $this->formButton('submit_search', $options['submit_value'], array('type' => 'submit')); ?>
     <div id="advanced">
-    <?php echo "<a style='color:#000;' href='http://dany.simmons.edu/killgrovepapers/items/search'>Advanced</a>"?>
+    <?php echo "<a style='color:#000;' href='/killgrovepapers/items/search'>Advanced</a>"?>
     </div>
 </form>
