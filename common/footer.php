@@ -5,14 +5,12 @@
 
     <footer role="contentinfo">
 
-        <div id="footer-text">
-            <?php echo get_theme_option('Footer Text'); ?>
-            <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
-                <p><?php echo $copyright; ?></p>
-            <?php endif; ?>
-            <p><?php echo __('<ul>
-            <li><a style="color:#404040" href="http://dany.simmons.edu/killgrovepapers/contact">Contact</a></li>
-            </ul>'); ?></p>
+        <div id="footerContent">
+           <ul class="customFoot">
+           		<li><?php echo __('<a  href="/killgrovepapers/exhibits/show/about-the-project">About the Project</a>'); ?></li>
+           		<li><?php echo __('<a href="/killgrovepapers/copyright">Copyright Information</a>'); ?></li>
+            	<li><?php echo __('<span><b>Last Updated: </b>April 22, 2016</span>');?></li>
+            </ul>
         </div>
 
         <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
